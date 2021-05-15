@@ -20,7 +20,13 @@ pipeline {
 			steps {
 				sh 'npm test'
 			}
-		} 
+		}
+
+		stage ('Archive Artifacts') {
+			steps {
+				archiveArtifacts artifacts: 'target/*.war'
+			}
+		}
 	
 	}
 }
