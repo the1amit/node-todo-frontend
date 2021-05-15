@@ -20,21 +20,13 @@ pipeline {
          sh 'npm test'
       }
     } 
-   stage('Code Quality Check via SonarQube') {
-    steps {
-       script {
-           def scannerHome = tool 'sonarqube';
-           withSonarQubeEnv("sonarqube-container") {
-           sh "${tool("sonarqube")}/bin/sonar-scanner \
-           -Dsonar.projectKey=test-node-js \
-           -Dsonar.sources=. \
-           -Dsonar.css.node=. \
-           -Dsonar.host.url=http://vmpl1000.eastus.cloudapp.azure.com:9000 \
-           -Dsonar.login=a45409daf059fc4bba63119ea22d8a1e8ceab5da"
-               }
-           }
-       }
-   }
+    
+    stage ('Sonar Analysis'){
+      steps {
+        sh 'npm sonar:sonar -Dsonar.host.url=http://vmpl1000.eastus.cloudapp.azure.com:9000 -Dsonar.login=a45409daf059fc4bba63119ea22d8a1e8ceab5da'
+        }
+    }
+   
    
   }
 }
