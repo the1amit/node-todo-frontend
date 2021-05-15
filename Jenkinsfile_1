@@ -25,7 +25,7 @@ pipeline {
     
     stage ('Sonar Analysis'){
       steps {
-        sh 'npm sonar:sonar '
+        sh 'npm run sonar'
       }
     }
 		
