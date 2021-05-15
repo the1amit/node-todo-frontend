@@ -25,7 +25,6 @@ pipeline {
     
     stage ('Sonar Analysis'){
       steps {
-				//sh 'npm run sonar -Dsonar.host.url=http://vmpl1000.eastus.cloudapp.azure.com:9000 -Dsonar.login=a45409daf059fc4bba63119ea22d8a1e8ceab5da'
       }
     }
 		
