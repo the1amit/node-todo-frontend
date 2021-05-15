@@ -1,15 +1,14 @@
 pipeline {
-	
 	agent any
-  
-	tools {nodejs "node"}
+  tools {nodejs "node"}
 	
 	stages {
+		
 		stage('Cloning Git') {
 			steps {
 				git 'https://github.com/the1amit/node-todo-frontend.git'
-      			}
-    		}
+      }
+    }
 	
 		stage('Install dependencies') {
 			steps {
