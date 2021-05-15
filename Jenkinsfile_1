@@ -3,30 +3,30 @@ pipeline {
 	agent any
   
 	tools {nodejs "node"}
-      
-  stages {
+	
+	stages {
 		stage('Cloning Git') {
 			steps {
-      	git 'https://github.com/the1amit/node-todo-frontend.git'
-      }
-    }
-        
-    stage('Install dependencies') {
-      steps {
-        sh 'npm install'
-      }
-    }
-     
-    stage('Test') {
-      steps {
-         sh 'npm test'
-      }
-    } 
-    
-    stage ('Sonar Analysis'){
-      steps {
-      }
-    }
-		
-  }
+				git 'https://github.com/the1amit/node-todo-frontend.git'
+      			}
+    		}
+	
+		stage('Install dependencies') {
+			steps {
+				sh 'npm install'
+			}
+		}
+	
+		stage('Test') {
+			steps {
+				sh 'npm test'
+			}
+		} 
+	
+		stage ('Sonar Analysis'){
+			steps {
+				//sh 'npm sonar:sonar '
+			}
+		}
+	}
 }
