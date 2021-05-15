@@ -7,7 +7,6 @@
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js",
     "test": "mocha -R spec src/**/*.spec.js"
-    "sonar": "node_modules/sonar-scanner/bin/sonar-scanner.bat"
   },
   "keywords": [
     "node.js",
