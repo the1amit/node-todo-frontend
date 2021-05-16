@@ -27,6 +27,14 @@ pipeline {
 				archiveArtifacts artifacts: 'target/*.war'
 			}
 		}
+
+		stage ('Notification'){
+		emailext (
+		      subject: "Job Completed",
+		      body: "Jenkins Pipeline Job for Nodeks Build got completed !!!",
+		      to: "the_amit@live.com"
+		    )
+	}
 	
 	}
 }
