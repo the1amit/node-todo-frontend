@@ -28,7 +28,7 @@ pipeline {
 			}
 		}
 
-		stage ('Notification'){
+		stage ('Email Notification'){
 			steps {
 				emailext body: 'NodeJs job Successfully Passed all stages!!!', subject: 'NodeJs job ', to: 'by.the.amit@gmail.com'
 			}
