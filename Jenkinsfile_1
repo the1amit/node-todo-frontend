@@ -30,7 +30,7 @@ pipeline {
 
 		stage ('Notification'){
 			steps {
-				mail bcc: '', body: 'Successful Build!!!', cc: '', from: '', replyTo: '', subject: 'NodeJS Build', to: 'the_amit@live.com'
+				mail bcc: '', body: 'Successful Build!!!', cc: '', from: '', replyTo: '', subject: 'NodeJS Build', to: 'by.the.amit@gmail.com'
 			}
 		}
 	
