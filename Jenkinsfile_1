@@ -24,7 +24,7 @@ pipeline {
 
 		stage ('Archive Artifacts') {
 			steps {
-				archiveArtifacts artifacts: 'target/*.war'
+				archiveArtifacts artifacts: 'build/*.js'
 			}
 		}
 
